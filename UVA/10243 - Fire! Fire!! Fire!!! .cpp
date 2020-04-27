@@ -105,7 +105,7 @@ int main()
                 adj[i].pb(v);
             }
         }
-        cout<<min(solve(1,0),solve(1,1))<<endl;
+        cout<<max(1,min(solve(1,0),solve(1,1)))<<endl;
     }
 
 
