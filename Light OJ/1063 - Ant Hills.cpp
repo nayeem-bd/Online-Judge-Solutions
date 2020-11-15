@@ -78,7 +78,7 @@ void articulation_point(vector<int>adj[],int u)
             low[u] =  min(low[u],d[v]);
         }
         else{
-            parent[u] = v;
+            parent[v] = u;
             articulation_point(adj,v);
             low[u] = min(low[u],low[v]);
             if(d[u]<=low[v] && u!=1){
