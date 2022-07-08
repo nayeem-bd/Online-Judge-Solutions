@@ -3,7 +3,7 @@
     Information and Communication Engineering ,
             University of Rajshahi
 */
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
 #define IOS ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
@@ -37,8 +37,10 @@ using namespace std;
 #define ms(arr,a) memset(arr,a,sizeof arr)
 #define mx 1005
 #define TestCase int t,cs=1;sci(t);while(t--)
+#define TestCase_IOS int t,cs=1;cin>>t;while(t--)
+#define PI 2*acos(0.0)
 
-//ll modPower(ll x, ll y, ll p){ll res = 1;x = x % p;while (y > 0){if (y & 1)res = (res*x) % p;y = y>>1;x = (x*x) % p;}return res;}
+//ll modPower(ll x,ll y,ll p){ll res=1LL;x=x%p;while(y>0){if(y&1)res=(res*x)%p;y=y>>1;x=(x*x)%p;}return res;}
 //ll power(ll a,ll b){if(b==0)return 1;ll x=power(a,b/2);x=(x*x);if(b&1)x=(x*a);return x;}
 
 /*---------------------Direction Array----------------------*/
@@ -52,6 +54,13 @@ using namespace std;
 
 /*----------------------------------------------------------*/
 
+/*--------------------------BitMask-------------------------*/
+
+//int Set(int N,int pos){return N=N | (1<<pos);}
+//int reset(int N,int pos){return N= N & ~(1<<pos);}
+//bool check(int N,int pos){return (bool)(N & (1<<pos));}
+
+/*---------------------------------------------------------*/
 
 
 
@@ -68,9 +77,9 @@ int main()
 
 
 
+
     return 0;
 }
-
 
 
 
