@@ -2,6 +2,7 @@
                     NAYEEM
     Information and Communication Engineering ,
             University of Rajshahi
+            Updated: 16-12-2022
 */
 #include<bits/stdc++.h>
 using namespace std;
@@ -40,8 +41,42 @@ using namespace std;
 #define TestCase_IOS int t,cs=1;cin>>t;while(t--)
 #define PI 2*acos(0.0)
 
-//ll modPower(ll x,ll y,ll p){ll res=1LL;x=x%p;while(y>0){if(y&1)res=(res*x)%p;y=y>>1;x=(x*x)%p;}return res;}
-//ll power(ll a,ll b){if(b==0)return 1;ll x=power(a,b/2);x=(x*x);if(b&1)x=(x*a);return x;}
+/*------------------------Policy-Based-Data-Structure------------------------*/
+
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+using namespace __gnu_pbds;
+
+
+template <typename T, typename K, typename Comp = less<T>>
+using ordered_map = tree<T,K,Comp,rb_tree_tag,tree_order_statistics_node_update>;
+
+template <typename T> using ordered_set = ordered_map<T,null_type, less<T>>;
+
+// Functions
+// order_of_key(k): Returns the number of elements strictly smaller than k.
+// find_by_order(k): Returns the address of the element at kth index (0-based)
+
+// AS MULTISET
+// ordered_set <pair<int,int>> os;
+// os.insert({value,id++});
+// os.erase(os.lower_bound({value,0}));
+// os.order_of_key({value, 0});
+
+/*---------------------------------------------------------------------------*/
+
+
+/*------------------------Declarations------------------------*/
+
+//priority_queue<int,vector<int>, greater<int>>  //priority queue sorted in increasing order
+
+/*------------------------------------------------------------*/
+
+template <typename T> T power(T a, T b){ T x=1;while(b){ if(b&1)x*=a;a*=a;b>>=1; }return x; }
+template <typename T> T modPower(T a, T b, T M){ T x=1;while(b){ if(b&1) x=(x*a)%M;a=(a*a)%M;b>>=1; }return x; }
+template <typename T> T Sqrt(T a) { T x=(T)sqrt(a); if((x+1)*(x+1)==a) x++; return x; }
+
+/*------------------------------------------------------------*/
 
 /*---------------------Direction Array----------------------*/
 
@@ -77,9 +112,10 @@ int main()
 
 
 
-
     return 0;
 }
+
+
 
 
 
