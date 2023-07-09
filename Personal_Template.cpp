@@ -2,7 +2,7 @@
                     NAYEEM
     Information and Communication Engineering ,
             University of Rajshahi
-            Updated: 16-12-2022
+            Updated: 09-07-2023
 */
 #include<bits/stdc++.h>
 using namespace std;
@@ -41,17 +41,27 @@ using namespace std;
 #define TestCase_IOS int t,cs=1;cin>>t;while(t--)
 #define PI 2*acos(0.0)
 
+/*------------------------Debugging-Template------------------------*/
+ 
+#ifndef NAYEEM
+#define debug(...) 101
+#else
+#include "F:\Programming\CPP\debug.h"
+#endif
+ 
+/*------------------------------------------------------------------*/
+
 /*------------------------Policy-Based-Data-Structure------------------------*/
 
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
-using namespace __gnu_pbds;
+// #include <ext/pb_ds/assoc_container.hpp>
+// #include <ext/pb_ds/tree_policy.hpp>
+// using namespace __gnu_pbds;
 
 
-template <typename T, typename K, typename Comp = less<T>>
-using ordered_map = tree<T,K,Comp,rb_tree_tag,tree_order_statistics_node_update>;
+// template <typename T, typename K, typename Comp = less<T>>
+// using ordered_map = tree<T,K,Comp,rb_tree_tag,tree_order_statistics_node_update>;
 
-template <typename T> using ordered_set = ordered_map<T,null_type, less<T>>;
+// template <typename T> using ordered_set = ordered_map<T,null_type, less<T>>;
 
 // Functions
 // order_of_key(k): Returns the number of elements strictly smaller than k.
@@ -98,7 +108,6 @@ template <typename T> T Sqrt(T a) { T x=(T)sqrt(a); if((x+1)*(x+1)==a) x++; retu
 /*---------------------------------------------------------*/
 
 
-
 int main()
 {
     //IOS
@@ -108,9 +117,6 @@ int main()
         Check Contains Limit && Declear Counter in Long Long
         Check Array Size
     */
-
-
-
 
     return 0;
 }
